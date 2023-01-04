@@ -150,192 +150,194 @@ class Maps:
 
             blocks.append(physics_engine.Block(1300, height - 60, 60))
 
-        elif self.level == 2:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1000, height - 40, 20))
-            pigs.append(physics_engine.Pig(1400, height - 40, 20))
-
-            blocks.append(physics_engine.Block(1200, height - 60, 60))
-            blocks.append(physics_engine.Block(1200, height - 2*35, 60))
-            blocks.append(physics_engine.Block(1500, height - 60, 60))
-
-        elif self.level == 3:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1200, height - 60, 30))
-            pigs.append(physics_engine.Pig(1300, height - 60, 30))
-
-            blocks.append(physics_engine.Block(1000, height - 100, 100))
-            blocks.append(physics_engine.Block(1000, height - 2*60, 100))
-            blocks.append(physics_engine.Block(1500, height - 100, 100))
-            blocks.append(physics_engine.Block(1500, height - 2*60, 100))
-
-        elif self.level == 4:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1200, 500 - 60, 30))
-            pigs.append(physics_engine.Pig(1300, height - 60, 30))
-
-            walls.append(objects.Slab(1000, 450, 500, 20))
-
-            blocks.append(physics_engine.Block(1100, height - 100, 100))
-
-        elif self.level == 5:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1300, 500 - 60, 25))
-            pigs.append(physics_engine.Pig(1300, height - 60, 25))
-
-            walls.append(objects.Slab(500, 400, 100, height - 400))
-            walls.append(objects.Slab(1000, 450, 500, 30))
-
-            blocks.append(physics_engine.Block(1150, 500 - 100, 100))
-            blocks.append(physics_engine.Block(1100, height - 100, 100))
-
-        elif self.level == 6:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1300, 500 - 60, 25))
-            pigs.append(physics_engine.Pig(1300, height - 60, 25))
-
-            walls.append(objects.Slab(1000, 0, 30, 450))
-            walls.append(objects.Slab(1000, 450, 500, 30))
-
-            blocks.append(physics_engine.Block(1150, 500 - 100, 100))
-            blocks.append(physics_engine.Block(1100, height - 100, 100))
-
-        elif self.level == 7:
-            for i in range(4):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, 500 - 60, 25))
-            pigs.append(physics_engine.Pig(1300, 500 - 60, 25))
-            pigs.append(physics_engine.Pig(1200, height - 60, 25))
-
-            walls.append(objects.Slab(1200, 250, 30, 200))
-            walls.append(objects.Slab(1000, 450, 500, 30))
-
-        elif self.level == 8:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1200, height - 60, 25))
-
-            walls.append(objects.Slab(700, 250, 30, height - 250))
-
-        elif self.level == 9:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1450, height - 60, 25))
 
 
-            blocks.append(physics_engine.Block(1250, height - 100, 100))
-            blocks.append(physics_engine.Block(1250, height - 2*60, 100))
-
-            walls.append(objects.Slab(700, 400, 30, height - 400))
-
-        elif self.level == 10:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1450, height - 60, 25))
-
-            blocks.append(physics_engine.Block(1250, height - 100, 100))
-            blocks.append(physics_engine.Block(1250, height - 2*60, 100))
-            blocks.append(physics_engine.Block(900, height - 100, 100))
-
-            walls.append(objects.Slab(900, 400, 500, 30))
-
-        elif self.level == 11:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1450, height - 60, 25))
-
-            blocks.append(physics_engine.Block(1250, height - 100, 100))
-            blocks.append(physics_engine.Block(1250, height - 2*60, 100))
-
-            walls.append(objects.Slab(900, 400, 500, 30))
-            walls.append(objects.Slab(900, 400, 30, height - 400))
-
-        elif self.level == 12:
-            for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1450, height - 60, 25))
-
-            walls.append(objects.Slab(900, 400, 500, 30))
-            walls.append(objects.Slab(1200, 500, 30, height - 500))
-
-        elif self.level == 13:
-            for i in range(4):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1200, 400 - 60, 25))
-            pigs.append(physics_engine.Pig(1450, height - 60, 25))
-
-            blocks.append(physics_engine.Block(900, height - 100, 100))
-            blocks.append(physics_engine.Block(900, height - 2*60, 100))
-
-            walls.append(objects.Slab(900, 400, 500, 40))
-            walls.append(objects.Slab(1200, 500, 30, height - 500))
-
-        elif self.level == 14:
-            for i in range(4):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(1100, height - 60, 25))
-            pigs.append(physics_engine.Pig(1100, 400 - 60, 25))
-            pigs.append(physics_engine.Pig(1450, height - 60, 25))
-
-            blocks.append(physics_engine.Block(900, height - 100, 100))
-
-            blocks.append(physics_engine.Block(1300, 400 - 100, 100))
-
-            walls.append(objects.Slab(900, 400, 500, 40))
-            walls.append(objects.Slab(900, 0, 30, 400))
-
-        elif self.level == 15:
-            for i in range(5):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
-                birds.append(new_bird)
-
-            pigs.append(physics_engine.Pig(900, height - 60, 25))
-            pigs.append(physics_engine.Pig(width - 400, 400 - 60, 25))
-            pigs.append(physics_engine.Pig(1700, height - 60, 25))
-
-
-            walls.append(objects.Slab(800, 400, 30, height - 400))
-            walls.append(objects.Slab(1000, 500, 30, height - 500))
-
-            walls.append(objects.Slab(width - 500, 400, 500, 40))
-            walls.append(objects.Slab(width - 500, 150, 60, 400 - 150))
+        # elif self.level == 2:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1000, height - 40, 20))
+        #     pigs.append(physics_engine.Pig(1400, height - 40, 20))
+        #
+        #     blocks.append(physics_engine.Block(1200, height - 60, 60))
+        #     blocks.append(physics_engine.Block(1200, height - 2*35, 60))
+        #     blocks.append(physics_engine.Block(1500, height - 60, 60))
+        #
+        # elif self.level == 3:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1200, height - 60, 30))
+        #     pigs.append(physics_engine.Pig(1300, height - 60, 30))
+        #
+        #     blocks.append(physics_engine.Block(1000, height - 100, 100))
+        #     blocks.append(physics_engine.Block(1000, height - 2*60, 100))
+        #     blocks.append(physics_engine.Block(1500, height - 100, 100))
+        #     blocks.append(physics_engine.Block(1500, height - 2*60, 100))
+        #
+        # elif self.level == 4:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1200, 500 - 60, 30))
+        #     pigs.append(physics_engine.Pig(1300, height - 60, 30))
+        #
+        #     walls.append(objects.Slab(1000, 450, 500, 20))
+        #
+        #     blocks.append(physics_engine.Block(1100, height - 100, 100))
+        #
+        # elif self.level == 5:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1300, 500 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1300, height - 60, 25))
+        #
+        #     walls.append(objects.Slab(500, 400, 100, height - 400))
+        #     walls.append(objects.Slab(1000, 450, 500, 30))
+        #
+        #     blocks.append(physics_engine.Block(1150, 500 - 100, 100))
+        #     blocks.append(physics_engine.Block(1100, height - 100, 100))
+        #
+        # elif self.level == 6:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1300, 500 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1300, height - 60, 25))
+        #
+        #     walls.append(objects.Slab(1000, 0, 30, 450))
+        #     walls.append(objects.Slab(1000, 450, 500, 30))
+        #
+        #     blocks.append(physics_engine.Block(1150, 500 - 100, 100))
+        #     blocks.append(physics_engine.Block(1100, height - 100, 100))
+        #
+        # elif self.level == 7:
+        #     for i in range(4):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, 500 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1300, 500 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1200, height - 60, 25))
+        #
+        #     walls.append(objects.Slab(1200, 250, 30, 200))
+        #     walls.append(objects.Slab(1000, 450, 500, 30))
+        #
+        # elif self.level == 8:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1200, height - 60, 25))
+        #
+        #     walls.append(objects.Slab(700, 250, 30, height - 250))
+        #
+        # elif self.level == 9:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1450, height - 60, 25))
+        #
+        #
+        #     blocks.append(physics_engine.Block(1250, height - 100, 100))
+        #     blocks.append(physics_engine.Block(1250, height - 2*60, 100))
+        #
+        #     walls.append(objects.Slab(700, 400, 30, height - 400))
+        #
+        # elif self.level == 10:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1450, height - 60, 25))
+        #
+        #     blocks.append(physics_engine.Block(1250, height - 100, 100))
+        #     blocks.append(physics_engine.Block(1250, height - 2*60, 100))
+        #     blocks.append(physics_engine.Block(900, height - 100, 100))
+        #
+        #     walls.append(objects.Slab(900, 400, 500, 30))
+        #
+        # elif self.level == 11:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1450, height - 60, 25))
+        #
+        #     blocks.append(physics_engine.Block(1250, height - 100, 100))
+        #     blocks.append(physics_engine.Block(1250, height - 2*60, 100))
+        #
+        #     walls.append(objects.Slab(900, 400, 500, 30))
+        #     walls.append(objects.Slab(900, 400, 30, height - 400))
+        #
+        # elif self.level == 12:
+        #     for i in range(3):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1450, height - 60, 25))
+        #
+        #     walls.append(objects.Slab(900, 400, 500, 30))
+        #     walls.append(objects.Slab(1200, 500, 30, height - 500))
+        #
+        # elif self.level == 13:
+        #     for i in range(4):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1200, 400 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1450, height - 60, 25))
+        #
+        #     blocks.append(physics_engine.Block(900, height - 100, 100))
+        #     blocks.append(physics_engine.Block(900, height - 2*60, 100))
+        #
+        #     walls.append(objects.Slab(900, 400, 500, 40))
+        #     walls.append(objects.Slab(1200, 500, 30, height - 500))
+        #
+        # elif self.level == 14:
+        #     for i in range(4):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(1100, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(1100, 400 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1450, height - 60, 25))
+        #
+        #     blocks.append(physics_engine.Block(900, height - 100, 100))
+        #
+        #     blocks.append(physics_engine.Block(1300, 400 - 100, 100))
+        #
+        #     walls.append(objects.Slab(900, 400, 500, 40))
+        #     walls.append(objects.Slab(900, 0, 30, 400))
+        #
+        # elif self.level == 15:
+        #     for i in range(5):
+        #         new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+        #         birds.append(new_bird)
+        #
+        #     pigs.append(physics_engine.Pig(900, height - 60, 25))
+        #     pigs.append(physics_engine.Pig(width - 400, 400 - 60, 25))
+        #     pigs.append(physics_engine.Pig(1700, height - 60, 25))
+        #
+        #
+        #     walls.append(objects.Slab(800, 400, 30, height - 400))
+        #     walls.append(objects.Slab(1000, 500, 30, height - 500))
+        #
+        #     walls.append(objects.Slab(width - 500, 400, 500, 40))
+        #     walls.append(objects.Slab(width - 500, 150, 60, 400 - 150))
 
 
         self.start_level(birds, pigs, blocks, walls)
