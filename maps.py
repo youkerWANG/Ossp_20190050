@@ -102,7 +102,7 @@ class Maps:
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
 
         mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
+        mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
 
         while True:
             for event in pygame.event.get():

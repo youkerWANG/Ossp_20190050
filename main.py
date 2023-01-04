@@ -61,8 +61,11 @@ def GAME():
     exit = interface.Button(1000, 400, 300, 100, close, (241, 148, 138), (245, 183, 177))
     exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", background)
 
+    wang = interface.Label(700,20,400,200, None, background)
+    wang.add_text("2019005_wang_ossp", 50, "Fonts/JetBrainsMono-Italic.ttf", (36, 240, 241))
+
     mandav = interface.Button(width - 300, height - 80, 300, 100, None, background)
-    mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", (41, 41, 41))
+    mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", (41, 41, 41))
 
     while True:
         for event in pygame.event.get():
@@ -84,7 +87,7 @@ def GAME():
         exit.draw()
         welcome.draw()
         mandav.draw()
-
+        wang.draw()
         pygame.display.update()
         clock.tick(60)
 
