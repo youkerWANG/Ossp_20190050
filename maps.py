@@ -26,12 +26,14 @@ ground = 50
 
 d_velocity = 2.0
 
+
 def init(screen):
     global width, height, display
     display = screen
     (width, height) = display.get_rect().size
     height -= ground
     interface.init(display)
+
 
 def all_rest(pigs, birds, blocks):
     threshold = 0.15
@@ -49,14 +51,16 @@ def all_rest(pigs, birds, blocks):
 
     return True
 
+
 def close():
     pygame.quit()
     sys.exit()
 
+
 class Maps:
     def __init__(self):
         self.level = 1
-        self.max_level = 15
+        self.max_level = 3 # reset the max level numbers
         self.color = {'background': (51, 51, 51)}
         self.score = 0
 
@@ -75,7 +79,7 @@ class Maps:
         return
 
     def check_win(self, pigs, birds):
-        if pigs == []:
+        if not pigs:
             print("WON!")
             return True
         if (not pigs == []) and birds == []:
@@ -96,7 +100,7 @@ class Maps:
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
 
         mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
+        mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", (113, 125, 126))
 
         while True:
             for event in pygame.event.get():
@@ -136,15 +140,33 @@ class Maps:
 
         if self.level == 1:
             for i in range(3):
-                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+                new_bird = physics_engine.Bird(40 * i + 5 * i, height - 40, 20, None, "BIRD")
                 birds.append(new_bird)
 
             pigs.append(physics_engine.Pig(1100, height - 40, 20))
             pigs.append(physics_engine.Pig(1500, height - 40, 20))
 
             blocks.append(physics_engine.Block(1300, height - 60, 60))
+        elif self.level == 2:
+            for i in range(2):
+                new_bird = physics_engine.Bird(40 * i + 5 * i, height - 40, 20, None, "BIRD")
+                birds.append(new_bird)
+            pigs.append(physics_engine.Pig(1100, height-40, 20))
+            pigs.append(physics_engine.Pig(1100, height - 80, 20))
+            pigs.append(physics_engine.Pig(1100, height - 120, 20))
+            pigs.append(physics_engine.Pig(1100, height - 160, 20))
+            pigs.append(physics_engine.Pig(1100, height - 200, 20))
+        elif self.level == 3:
+            for i in range(3):
+                new_bird = physics_engine.Bird(40 * i + 5 * i, height - 40, 20, None, "BIRD")
+                birds.append(new_bird)
 
+            pigs.append(physics_engine.Pig(1100, height - 40, 20))
+            pigs.append(physics_engine.Pig(1200, height - 40, 20))
+            pigs.append(physics_engine.Pig(1300, height - 40, 20))
+            pigs.append(physics_engine.Pig(1400, height - 40, 20))
 
+            walls.append(objects.Slab(1000, 450, 500, 30))
 
         # elif self.level == 2:
         #     for i in range(3):
@@ -333,7 +355,6 @@ class Maps:
         #     walls.append(objects.Slab(width - 500, 400, 500, 40))
         #     walls.append(objects.Slab(width - 500, 150, 60, 400 - 150))
 
-
         self.start_level(birds, pigs, blocks, walls)
 
     def replay_level(self):
@@ -349,7 +370,8 @@ class Maps:
 
         level_cleared_text = interface.Label(700, 100, 400, 200, None, self.color['background'])
         if self.level <= self.max_level:
-            level_cleared_text.add_text("LEVEL " + str(self.level - 1) + " CLEARED!", 80, "Fonts/Comic_Kings.ttf", (236, 240, 241))
+            level_cleared_text.add_text("LEVEL " + str(self.level - 1) + " CLEARED!", 80, "Fonts/Comic_Kings.ttf",
+                                        (236, 240, 241))
         else:
             level_cleared_text.add_text("ALL LEVEL CLEARED!", 80, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
@@ -370,7 +392,7 @@ class Maps:
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
 
         mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
+        mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", (113, 125, 126))
 
         while True:
             for event in pygame.event.get():
@@ -412,7 +434,7 @@ class Maps:
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
 
         mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
+        mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", (113, 125, 126))
 
         while True:
             for event in pygame.event.get():
@@ -460,7 +482,7 @@ class Maps:
         pigs_remaining.add_text("PIGS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
         mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
+        mandav.add_text("ossp", 60, "Fonts/arfmoochikncheez.ttf", (113, 125, 126))
 
         while loop:
             for event in pygame.event.get():
@@ -488,9 +510,9 @@ class Maps:
                 print("LOADED!")
                 birds.pop(0)
                 if self.check_win(pigs, birds) == 1:
-                    self.score += len(birds)*100
+                    self.score += len(birds) * 100
                     self.level_cleared()
-                elif self.check_win(pigs,birds) == 0:
+                elif self.check_win(pigs, birds) == 0:
                     self.level_failed()
 
                 if not birds == []:
@@ -503,21 +525,21 @@ class Maps:
             if not flag:
                 birds[0].unload()
 
-            #display.fill(self.color['background'])
+            # display.fill(self.color['background'])
             color = self.color['background']
             for i in range(3):
                 color = (color[0] + 5, color[1] + 5, color[2] + 5)
-                pygame.draw.rect(display, color, (0, i*300, width, 300))
+                pygame.draw.rect(display, color, (0, i * 300, width, 300))
 
             pygame.draw.rect(display, (77, 86, 86), (0, height, width, 50))
-
 
             slingshot.draw(birds[0])
 
             for i in range(len(pigs)):
                 for j in range(len(blocks)):
                     pig_v, block_v = pigs[i].velocity.magnitude, blocks[j].velocity.magnitude
-                    pigs[i], blocks[j], result_block_pig = physics_engine.collision_handler(pigs[i], blocks[j], "BALL_N_BLOCK")
+                    pigs[i], blocks[j], result_block_pig = physics_engine.collision_handler(pigs[i], blocks[j],
+                                                                                            "BALL_N_BLOCK")
                     pig_v1, block_v1 = pigs[i].velocity.magnitude, blocks[j].velocity.magnitude
 
                     if result_block_pig:
@@ -532,7 +554,8 @@ class Maps:
                 if not (birds[i].loaded or birds[i].velocity.magnitude == 0):
                     for j in range(len(blocks)):
                         birds_v, block_v = birds[i].velocity.magnitude, blocks[j].velocity.magnitude
-                        birds[i], blocks[j], result_bird_block = physics_engine.collision_handler(birds[i], blocks[j], "BALL_N_BLOCK")
+                        birds[i], blocks[j], result_bird_block = physics_engine.collision_handler(birds[i], blocks[j],
+                                                                                                  "BALL_N_BLOCK")
                         birds_v1, block_v1 = birds[i].velocity.magnitude, blocks[j].velocity.magnitude
 
                         if result_bird_block:
@@ -543,7 +566,7 @@ class Maps:
 
             for i in range(len(pigs)):
                 pigs[i].move()
-                for j in range(i+1, len(pigs)):
+                for j in range(i + 1, len(pigs)):
                     pig1_v, pig2_v = pigs[i].velocity.magnitude, pigs[j].velocity.magnitude
                     pigs[i], pigs[j], result = physics_engine.collision_handler(pigs[i], pigs[j], "BALL")
                     pig1_v1, pig2_v1 = pigs[i].velocity.magnitude, pigs[j].velocity.magnitude
@@ -614,7 +637,8 @@ class Maps:
             score_text.add_text("SCORE: " + str(self.score), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
             score_text.draw()
 
-            birds_remaining.add_text("BIRDS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
+            birds_remaining.add_text("BIRDS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf",
+                                     (236, 240, 241))
             birds_remaining.draw()
 
             pigs_remaining.add_text("PIGS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
