@@ -12,12 +12,6 @@
 
     Requirements: Pygame, sys, math, random
 
-    By: Jatin Kumar Mandav
-
-    Blog: https://www.jatinmandav.wordpress.com
-    Twitter: @jatinmandav
-    YouTube: https://www.youtube.com/mandav
-
 '''
 import pygame
 import sys

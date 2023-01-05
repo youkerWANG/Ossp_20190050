@@ -6,17 +6,6 @@
     Contents: The Main file to Start the Game!
 
     Requirements: Pygame, sys, random, math
-    Supporting Modules: interface.py, physics_engine.py, maps.py, objects.py
-
-    Usage:
-            Angry_Birds/$ python3 main.py  or
-            Angry_Birds/$ python main.py
-
-    By: Jatin Kumar Mandav
-
-    Blog: https://www.jatinmandav.wordpress.com
-    Twitter: @jatinmandav
-    YouTube: https://www.youtube.com/mandav
 
 '''
 import pygame
