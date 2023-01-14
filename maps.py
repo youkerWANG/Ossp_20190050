@@ -60,7 +60,7 @@ def close():
 class Maps:
     def __init__(self):
         self.level = 1
-        self.max_level = 3 # reset the max level numbers
+        self.max_level = 6 # reset the max level numbers
         self.color = {'background': (51, 51, 51)}
         self.score = 0
 
