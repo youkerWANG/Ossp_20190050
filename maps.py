@@ -142,11 +142,12 @@ class Maps:
             for i in range(3):
                 new_bird = physics_engine.Bird(40 * i + 5 * i, height - 40, 20, None, "BIRD")
                 birds.append(new_bird)
-
+            blocks.append(physics_engine.Block(1000, height - 40, 60))
             pigs.append(physics_engine.Pig(1100, height - 40, 20))
-            pigs.append(physics_engine.Pig(1500, height - 40, 20))
-
-            blocks.append(physics_engine.Block(1300, height - 60, 60))
+            blocks.append(physics_engine.Block(1200, height - 60, 60))
+            pigs.append(physics_engine.Pig(1300, height - 40, 20))
+            blocks.append(physics_engine.Block(1400,height - 60, 60))
+            
         elif self.level == 2:
             for i in range(2):
                 new_bird = physics_engine.Bird(40 * i + 5 * i, height - 40, 20, None, "BIRD")
