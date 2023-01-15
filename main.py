@@ -19,8 +19,8 @@ import maps
 import interface
 
 pygame.init()
-width = 1800
-height = 700
+width = 1920
+height = 720
 display = pygame.display.set_mode((width, height))
 clock = pygame.time.Clock()
 
