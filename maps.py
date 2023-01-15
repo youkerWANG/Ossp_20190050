@@ -168,6 +168,30 @@ class Maps:
             pigs.append(physics_engine.Pig(1400, height - 40, 20))
 
             walls.append(objects.Slab(1000, 450, 500, 30))
+        elif self.level == 4:
+             for i in range(5):
+                new_bird = physics_engine.Bird(40*i + 5*i, height - 40, 20, None, "BIRD")
+                birds.append(new_bird)
+        
+                pigs.append(physics_engine.Pig(900, height - 60, 25))
+                pigs.append(physics_engine.Pig(900, height - 60, 25))
+                pigs.append(physics_engine.Pig(900, height - 60, 25))
+                pigs.append(physics_engine.Pig(900, height - 60, 25))
+                pigs.append(physics_engine.Pig(900, height - 60, 25))
+                pigs.append(physics_engine.Pig(width - 400, 400 - 60, 25))
+                pigs.append(physics_engine.Pig(1700, height - 60, 25))
+               
+        
+                walls.append(objects.Slab(800, 400, 30, height - 400))
+                walls.append(objects.Slab(1000, 500, 30, height - 500))
+        
+                walls.append(objects.Slab(width - 500, 400, 500, 40))
+                walls.append(objects.Slab(width - 500, 150, 60, 400 - 150))
+
+
+
+
+
 
         # elif self.level == 2:
         #     for i in range(3):
