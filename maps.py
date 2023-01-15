@@ -1,6 +1,6 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Foods
     File: maps.py
 
     Contents: Class MAPS, that puts everything in action!
@@ -320,7 +320,7 @@ class Maps:
         score_text.add_text("SCORE: " + str(self.score), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
         birds_remaining = interface.Label(120, 50, 100, 50, None, self.color['background'])
-        birds_remaining.add_text("BIRDS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
+        birds_remaining.add_text("FOODS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
         pigs_remaining = interface.Label(110, 90, 100, 50, None, self.color['background'])
         pigs_remaining.add_text("PIGS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
@@ -481,7 +481,7 @@ class Maps:
             score_text.add_text("SCORE: " + str(self.score), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
             score_text.draw()
 
-            birds_remaining.add_text("BIRDS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf",
+            birds_remaining.add_text("FOODS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf",
                                      (236, 240, 241))
             birds_remaining.draw()
 

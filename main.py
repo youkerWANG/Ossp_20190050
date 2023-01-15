@@ -1,6 +1,6 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Foods
     File: main.py
 
     Contents: The Main file to Start the Game!
@@ -42,7 +42,7 @@ def GAME():
     map = maps.Maps()
 
     welcome = interface.Label(700, 100, 400, 200, None, background)
-    welcome.add_text("ANGRY BIRDS", 80, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
+    welcome.add_text("ANGRY FOODS", 80, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
 
     start = interface.Button(500, 400, 300, 100, start_game, (244, 208, 63), (247, 220, 111))
     start.add_text("START GAME", 60, "Fonts/arfmoochikncheez.ttf", background)

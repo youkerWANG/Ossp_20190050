@@ -66,12 +66,14 @@ class Pig:
 
         self.pig_dead = pygame.image.load("Images/pig_damaged.png")
 
-        self.bird_image = pygame.image.load("Images/bird.png")
+        self.bird_image = pygame.image.load("Images/bibimbap_bird.png")
+        self.bird2_image = pygame.image.load("Images/corn-dog_bird.png")
+        self.bird3_image = pygame.image.load("Images/kimbap_bird.png")
 
         if type == "PIG":
             self.image = random.choice([self.pig1_image, self.pig2_image])
         else:
-            self.image = self.bird_image
+            self.image = random.choice([self.bird_image, self.bird2_image, self.bird3_image])
 
         self.type = type
         self.color = color

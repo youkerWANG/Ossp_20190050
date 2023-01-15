@@ -1,6 +1,6 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Foods
     File: interface.py
 
     Contents: Class Buttons and Class Labels for User Interface

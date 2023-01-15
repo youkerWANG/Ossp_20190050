@@ -1,6 +1,6 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Foods
     File: objects.py
 
     Contents: Class SLAB or WALL
